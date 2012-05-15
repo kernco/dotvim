@@ -21,6 +21,9 @@ if has("autocmd")
 
     " Clean trailing whitespace on buffer write
     autocmd BufWritePre *.py,*.js,*.c,*.h,*.cpp :call Preserve("%s/\\s\\+$//e")
+
+    " Source the vimrc file after saving it
+    autocmd BufWritePost .vimrc,vimrc source $MYVIMRC
 endif
 
 function! Preserve(command)
