@@ -16,11 +16,22 @@ set smartindent
 " Wrapping
 set textwidth=79
 set wrap
-set linebreak
 
 " Code folding
 set foldmethod=indent
 set foldlevel=99
+
+" Make moving around wrapped lines easier
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
 
 " Settings for vim compiled with autocmd enabled
 if has("autocmd")
@@ -66,7 +77,7 @@ map <C-l> <C-w>l
 filetype plugin indent on
 syntax on
 set ruler
-set nu
+set number
 set showmatch
 set t_Co=256
 colorscheme molokai
