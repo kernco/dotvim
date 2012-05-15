@@ -9,6 +9,12 @@ set listchars=tab:▸\ ,eol:¬
 
 " Set indentation preferences
 set ts=4 sts=4 sw=4 expandtab
+set autoindent
+set smartindent
+
+set textwidth=79
+set wrap
+set linebreak
 
 " Settings for vim compiled with autocmd enabled
 if has("autocmd")
@@ -18,6 +24,9 @@ if has("autocmd")
     " Syntax of these languages is fussy over tabs vs spaces
     autocmd FileType make setlocal ts=4 sts=4 sw=4 noexpandtab
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+    " Smartindent not good for python
+    autocmd FileType python setlocal nosmartindent
 
     " Clean trailing whitespace on buffer write
     autocmd BufWritePre *.py,*.js,*.c,*.h,*.cpp :call Preserve("%s/\\s\\+$//e")
@@ -50,7 +59,6 @@ map <C-l> <C-w>l
 
 filetype plugin on
 syntax on
-set autoindent
 set ruler
 set nu
 set showmatch
