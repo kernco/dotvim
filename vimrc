@@ -1,4 +1,5 @@
 " Activate pathogen
+filetype off
 call pathogen#infect()
 
 " Shortcut to rapidly toggle 'set list'
@@ -12,9 +13,14 @@ set ts=4 sts=4 sw=4 expandtab
 set autoindent
 set smartindent
 
+" Wrapping
 set textwidth=79
 set wrap
 set linebreak
+
+" Code folding
+set foldmethod=indent
+set foldlevel=99
 
 " Settings for vim compiled with autocmd enabled
 if has("autocmd")
