@@ -14,8 +14,8 @@ set autoindent
 set smartindent
 
 " Wrapping
-set textwidth=79
-set wrap
+"set textwidth=79
+"set wrap
 
 " Code folding
 set foldmethod=indent
