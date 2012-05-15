@@ -57,7 +57,7 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-filetype plugin on
+filetype plugin indent on
 syntax on
 set ruler
 set nu
